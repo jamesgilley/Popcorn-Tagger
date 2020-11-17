@@ -114,7 +114,7 @@ function myFunction(event) {
             let movieOverview5 = document.querySelector('#movieOverview5').textContent = data.results[4].overview;
             let posterPath5 = baseUrl + data.results[4].poster_path;
             let moviePoster5 = document.querySelector('#moviePoster5').innerHTML = `<img width='300px' height='300px' src=${posterPath5}></img>`;
-            fetch("https://imdb8.p.rapidapi.com/title/find?q=" + encodeURI(movieTitle1)
+            fetch("https://imdb8.p.rapidapi.com/title/find?q=" + encodeURI(movieTitle1.textContent)
             , {
               "method": "GET",
               "headers": {
